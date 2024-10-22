@@ -2,13 +2,13 @@ import os
 from crewai import Agent, Task, Crew, LLM, Process
 #from crewai_tools import PDFSearchTool
 
-#os.environ["OPENAI_API_KEY"] = "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"
+#os.environ["OPENAI_API_KEY"] = "XXXXXXXXXXXX"
 #PDF tool
 
 #ptool = PDFSearchTool(pdf=r"C:\Users\FazilMoh\OneDrive - Unisys\Desktop\hackathons\AITutor\data\Subject_EVS_grade4.pdf")
 
 # Initialize LLM
-llm = LLM(model="gemini/gemini-1.5-pro", temperature=0.3, verbose=True, api_key="AIzaSyCxmxt1nhFZ5sD8GMU8iR1HJgvsp3Hurpk")
+llm = LLM(model="gemini/gemini-1.5-pro", temperature=0.3, verbose=True, api_key="XXXXXXXXXXXX")
 
 # Collect concept from the user
 user_concept = input("Please provide the concept you want to learn or quiz about: ")

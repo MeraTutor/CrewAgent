@@ -2,13 +2,10 @@ import os
 from crewai import Agent, Task, Crew, LLM, Process
 #from crewai_tools import PDFSearchTool
 
-#os.environ["OPENAI_API_KEY"] = "XXXXXXXXXXXX"
 #PDF tool
 
-#ptool = PDFSearchTool(pdf=r"C:\Users\FazilMoh\OneDrive - Unisys\Desktop\hackathons\AITutor\data\Subject_EVS_grade4.pdf")
-
 # Initialize LLM
-llm = LLM(model="gemini/gemini-1.5-pro", temperature=0.3, verbose=True, api_key="XXXXXXXXXXXX")
+llm = LLM(model="ibm/granite-20b-multilingual", temperature=0.3, verbose=True, api_key="XXXXXXXXXXXX")
 
 # Collect concept from the user
 user_concept = input("Please provide the concept you want to learn or quiz about: ")

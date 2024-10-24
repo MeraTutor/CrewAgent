@@ -47,6 +47,18 @@ quiz_evaluator_agent = Agent(
     llm=llm
 )
 
+assignment_agent = Agent(
+    role='AI Assignment Generator',
+    goal=f"""You are an AI assignment generator responsible for creating a set of five targeted assignment questions. 
+            Based on the student's areas of improvement from the quiz evaluation, you must provide questions that will help the student strengthen their understanding. 
+            The assignment should focus on the areas of improvement. Provide a mix of theoretical and application-based questions.""",
+    backstory="""You are highly experienced in identifying weak areas in students' understanding and generating assignments that target those areas to improve their knowledge and skills. 
+                You provide challenging but appropriate questions that reinforce learning.""",
+    verbose=True,
+    allow_delegation=False,
+    llm=llm
+)
+
 # Answer key extractor agent
 answer_key_agent = Agent(
     role='AI Answer Key Generator',
